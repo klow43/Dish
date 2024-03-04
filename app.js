@@ -8,7 +8,7 @@ var logger = require('morgan');
 //router setup
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-// const jsonRouter = require('./routes/json');
+const jsonRouter = require('./routes/json');
 // const dishesRouter = require('./routes/dishes');
 
 var app = express();
@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //endpoints to routers
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// app.use('/json', jsonRouter);
+app.use('/json', jsonRouter);
 // app.use('/dishes', dishesRouter);
 
 // catch 404 and forward to error handler
