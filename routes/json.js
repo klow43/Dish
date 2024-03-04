@@ -9,7 +9,7 @@ require('aws-sdk/lib/maintenance_mode_message').suppress = true;
 const s3 = new AWS.S3()
 
 
-//Cyclic.sh nasic auth to access /json endpoint, only for auth users.
+//Cyclic.sh basic auth to access /json endpoint, only for auth users.
 
 //get text from JSON file.
 router.get('/', async function(req, res) {
